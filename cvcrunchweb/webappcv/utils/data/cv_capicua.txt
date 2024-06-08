@@ -1,0 +1,59 @@
+Marcelo Ferreira
+
+Cosmópolis/SP
+Cellphone: +55 (61) 99922-0052
+E-mail: marcelo.ferreira.dsa@gmail.com
+LinkedIn: linkedin.com/in/marcelo-ferreira-dsa/
+
+Profile
+
+Highly skilled and accomplished professional with a diverse background in strategic advisory roles within Banco do Brasil's Operations Unit. With over six years of experience as a Senior Strategic Advisor, I have consistently demonstrated expertise in data analytics, process improvement, and project management. Proficient in database modeling, ETL processes, and dashboard development, I have successfully led initiatives to enhance operational efficiency and drive business growth. My communicate technical concepts to non-technical stakeholders, and implement data-driven solutions has resulted in significant cost savings and improved decision-making across multiple teams. Leveraging my strong background in operations management, I am adept at designing and implementing strategies to streamline processes and optimize resource allocation. With a proven track record of delivering results and a commitment to continuous improvement, I am well-equipped to excel in dynamic and challenging environments.
+
+Academic Education
+
+Postgraduate degree in Science/Information Studies – MBA USP/Esalq – 2024
+Foundation on Statistics, R programming and Machine Learning – 2023
+Bachelor in Philosophy – Universidade do Sul de Santa Catarina – 2018
+
+Professional Experience
+Banco do Brasil S/A
+Role: Senior Advisor/Data Scientist – may 2020 to april 2022 
+Main activities: Acting as an integral part of a highly specialized technical team, focusing on innovations related to cash management, self-service terminals and cash terminal applications; responsible for covering a variety of areas, from planning to the implementation of dashboards for various departments; end-to-end project leadership, from conception to quality assurance in final delivery; assistance in promoting a data-driven culture for more than eleven thousand employees in different departments; construction of automations in Python, using specific libraries for each task; maintenance of Java tools, ensuring their efficiency and reliability; maintenance of DB2 and MySQL databases and supervision of ETL processes, ensuring the integrity and effectiveness of operations.
+Banco do Brasil S/A
+Role: Senior Advisor/Cash Manager – march 2018 to april 2020
+Main activities: Key person for data sources related to cash, self-service terminals and cash due to my in-depth knowledge; projection of KPIs, development of data visualization panels using Tibco Spotfire for monitoring and automation of extraction tasks; processing and loading data (ETL) from different sources; preparation and review of internal regulations, ensuring internal compliance and alignment with legislation; implementing improvements in cash balance management for the bank, covering domestic and foreign currency and resolving long-standing discrepancies between physical and accounting balances, creating a local data infrastructure, including capture and reconciliation.
+
+Banco do Brasil S/A
+Role: Senior Advisor/TCX Management – december 2015 to february 2018
+Main activities: Responsible for mapping and reviewing implementations of improvements in cash transactions until negotiating with stakeholders to ensure efficiency and strategic alignment; mapping, reviewing and monitoring implementations of improvements in transactions, gathering technical and operational requirements; preparation of detailed documentation regarding transactions and weekly reports for the team and management; data collection from various sources, including DB2, MySQL, and development of robots for screen scraping and webscraping and use of tools such as Excel, Access and SAS Enterprise Guide for data analysis and process optimization.
+Success Case: After two years allocated to the project, we managed to reduce the costs of monthly cash transactions, allowing us to go from spending 74 million/month to spending 45 million/month, representing a cost reduction of more than 39.18%.
+
+Other experiences within Banco do Brasil S/A:
+Full Advisor/TCX Management – november 2014 to november 2015
+Full Advisor/TAA Management – july 2013 to october 2014
+Junior Advisor – january 2011 to june 2013
+Supply Assistant – may 2007 to december 2010
+Clerk/Monitoring – november 2006 to april 2007
+Administrative Manager – february 2004 to october 2006
+
+
+Languages
+English: Advanced / Spanish: Basic / French: Basic
+
+Skills
+R Language	• Power BI, Tableau and Looker	• HTML, CSS and Javascript
+SQL e MySQL	• Databricks		• Docker
+Python	• Airflow		• REST APIs
+
+
+Courses
+Data Analysis with R Programming – Coursera
+Python for Data Science, AI & Development – Coursera
+Databases and SQL for Data Science – Coursera 
+Python for Data Science and AI – Coursera 
+Machine Learning – Data Science Academy 
+Big Data Real-Time Analytics with Python and Spark – Data Science Academy
+
+
+Other Activities
+Coloring books – With the aim of combating religious intolerance and promoting knowledge, I am producing coloring books for both adult and child audiences featuring Yoruba religion, with the main characters being the Orishas. Recognizing that coloring books are a widely used stress-relief resource, I realized they could also provide an opportunity for children and adults to engage with the deities of these religions. The illustrations are being developed with the assistance of AI, with enhancements made in Photoshop and Adobe Illustrator. The expected release date is the second half of 2024.

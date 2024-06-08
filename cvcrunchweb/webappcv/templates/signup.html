@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>User Registration</title>
+   
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/signin.css" />
+    
+  </head>
+  <body class="text-center">
+    <form class="form-signin" action="{{ url_for('main.signup') }}" method="POST">
+      {{ form.hidden_tag() }}
+      <img class="mb-4" src="{{ url_for('static', filename='images/cv_crunch_trsp.png') }}" alt="" height="144">
+      <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
+    
+      {{ form.email.label(class_="sr-only") }}
+      {{ form.email(class_="form-control mb-2", id='signup-email', placeholder="Email") }}
+      {% if form.email.errors %}
+        <div class="alert alert-danger">
+          {% for error in form.email.errors %}
+            <p>{{ error }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      
+    
+      {{ form.password.label(class_="sr-only") }}
+      {{ form.password(class_="form-control mb-2", id="password", placeholder="Password") }}
+      {% if form.password.errors %}
+        <div class="alert alert-danger">
+          {% for error in form.password.errors %}
+            <p>{{ error }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    
+      {{ form.conf_password.label(class_="sr-only") }}
+      {{ form.conf_password(class_="form-control mb-2", id="confirm_password",  placeholder="Confirm Password") }}
+      {% if form.conf_password.errors %}
+        <div class="alert alert-danger">
+          {% for error in form.conf_password.errors %}
+            <p>{{ error }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+            <div id="alert-box-email" class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <p id="message" style="color: red; display: none;">Passwords must match!</p>
+      {{ form.submit(class_="btn btn-lg btn-primary btn-block") }}
+      <div>
+        <span class="text-small">Already have an account?<a href="{{url_for('main.login')}}">Click here.</a></span>
+      </div>
+    </form>
+    
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script >
+  document.getElementById('signup-email').addEventListener('focus', function() {
+    console.log("Input event triggered");
+    let alertBox = document.getElementById('alert-box-email');
+    if (alertBox) {
+        alertBox.style.display = 'none';
+    }
+});
+document.getElementById('confirm_password').addEventListener('keyup', function () {
+  const password = document.getElementById('password');
+  const confirmPassword = document.getElementById('confirm_password');
+  const message = document.getElementById('message');
+
+  if (password.value === confirmPassword.value) {
+      confirmPassword.classList.remove('error');
+      password.classList.remove('error');
+      message.style.display = 'none';
+  } else {
+      confirmPassword.classList.add('error');
+      password.classList.add('error');
+      message.style.display = 'block';
+  }
+});
+</script>
+    
+</body>
+</html>

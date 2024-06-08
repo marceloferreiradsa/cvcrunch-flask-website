@@ -1,0 +1,110 @@
+Listagem de caminhos de pasta
+O número de série do volume é 2088-E613
+C:.
+|   app.py
+|   app_old.py
+|   directory_tree.txt
+|   
+\---webappcv
+    |   views.py
+    |   __init__.py
+    |   
+    +---data
+    |       cv_capicua.txt
+    |       cv_definition.txt
+    |       cv_encora.txt
+    |       cv_test_gorilla.txt
+    |       definition.txt
+    |       jd_capicua.txt
+    |       jd_encora.txt
+    |       report_example.txt
+    |       submit.txt
+    |       
+    +---static
+    |   +---css
+    |   |       bootstrap.css
+    |   |       dropzone.css
+    |   |       signin.css
+    |   |       style.css
+    |   |       
+    |   +---images
+    |   |       button.png
+    |   |       cv crunch fundo azul.png
+    |   |       cv crunch2.png
+    |   |       cv_crunch_trsp.png
+    |   |       favicon.png
+    |   |       favicon.svg
+    |   |       
+    |   +---js
+    |   |       dropzone.js
+    |   |       jquery.js
+    |   |       script.js
+    |   |       test.js
+    |   |       
+    |   \---uploads
+    |       |   CV_09b6fd5a-15e3-4aa4-9b4b-0c1d8bf441fa_1710805040.txt
+    |       |   CV_1d1c7a85-e2d7-4bba-a153-382334dc06ff_1710792656.txt
+    |       |   CV_77486fab-7a2a-4f28-a101-71b2c3aae106_1710874602.txt
+    |       |   CV_7860d5a6-e667-465b-b621-ceb4ceb975eb_1710804000.txt
+    |       |   CV_8ab318ea-25f7-4708-81ec-53f765f13206_1710874487.txt
+    |       |   CV_aa357548-1959-47b4-915a-0160b3734c31_1710792053.txt
+    |       |   CV_eb8ea155-ad7f-453d-b262-c1c450927810_1710875490.txt
+    |       |   CV_f7e6b50a-633d-4c5b-9724-5bde154e6348_1710806941.txt
+    |       |   CV_fdf0184f-683e-47ec-a7e7-2baaf54e62b9_1710805250.txt
+    |       |   JD_09b6fd5a-15e3-4aa4-9b4b-0c1d8bf441fa_1710805045.txt
+    |       |   JD_1d1c7a85-e2d7-4bba-a153-382334dc06ff_1710792848.txt
+    |       |   JD_77486fab-7a2a-4f28-a101-71b2c3aae106_1710874606.txt
+    |       |   JD_7860d5a6-e667-465b-b621-ceb4ceb975eb_1710804006.txt
+    |       |   JD_8ab318ea-25f7-4708-81ec-53f765f13206_1710874525.txt
+    |       |   JD_aa357548-1959-47b4-915a-0160b3734c31_1710792094.txt
+    |       |   JD_eb8ea155-ad7f-453d-b262-c1c450927810_1710875526.txt
+    |       |   JD_f7e6b50a-633d-4c5b-9724-5bde154e6348_1710806969.txt
+    |       |   JD_f7e6b50a-633d-4c5b-9724-5bde154e6348_1710807652.txt
+    |       |   JD_fdf0184f-683e-47ec-a7e7-2baaf54e62b9_1710805278.txt
+    |       |   Marcelo_Ferreira.docx
+    |       |   Marcelo_Ferreira.pdf
+    |       |   MS_09b6fd5a-15e3-4aa4-9b4b-0c1d8bf441fa_1710805062.json
+    |       |   MS_1d1c7a85-e2d7-4bba-a153-382334dc06ff_1710792868.json
+    |       |   MS_77486fab-7a2a-4f28-a101-71b2c3aae106_1710874630.json
+    |       |   MS_7860d5a6-e667-465b-b621-ceb4ceb975eb_1710804022.json
+    |       |   MS_872f6297-c14c-4d8f-91d1-0848750a0ec2_1710791741.json
+    |       |   MS_8ab318ea-25f7-4708-81ec-53f765f13206_1710874545.json
+    |       |   MS_aa357548-1959-47b4-915a-0160b3734c31_1710792111.json
+    |       |   MS_eb8ea155-ad7f-453d-b262-c1c450927810_1710875551.json
+    |       |   MS_f7e6b50a-633d-4c5b-9724-5bde154e6348_1710806993.json
+    |       |   MS_f7e6b50a-633d-4c5b-9724-5bde154e6348_1710807670.json
+    |       |   MS_fdf0184f-683e-47ec-a7e7-2baaf54e62b9_1710805300.json
+    |       |   Untitled.ipynb
+    |       |   
+    |       \---.ipynb_checkpoints
+    |               Untitled-checkpoint.ipynb
+    |               
+    +---templates
+    |       index copy.html
+    |       index.html
+    |       login.html
+    |       step4.html
+    |       
+    +---utils
+    |   |   api_call.py
+    |   |   create_secret_key.py
+    |   |   graph.py
+    |   |   parse.py
+    |   |   parse_docx.py
+    |   |   parse_pdf.py
+    |   |   role_examples.py
+    |   |   test.py
+    |   |   test2.py
+    |   |   zipfile_example.py
+    |   |   __init__.py
+    |   |   
+    |   \---__pycache__
+    |           api_call.cpython-311.pyc
+    |           parse.cpython-311.pyc
+    |           role_examples.cpython-311.pyc
+    |           __init__.cpython-311.pyc
+    |           
+    \---__pycache__
+            views.cpython-311.pyc
+            __init__.cpython-311.pyc
+            

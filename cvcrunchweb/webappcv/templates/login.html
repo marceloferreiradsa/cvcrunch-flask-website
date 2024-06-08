@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>User Login</title>
+   
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/signin.css" />
+
+
+    <style>
+    </style>
+
+  </head>
+  <body class="text-center">
+    <form class="form-signin" method="POST">
+      {{ form.hidden_tag() }} 
+      <img class="mb-4" src="../static/images/cv_crunch_trsp.png" alt=""  height="144">
+      <!--<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>-->
+        {{form.email.label(class_="sr-only")}}
+        {{form.email(class_="form-control", id="login_email", placeholder="Email address", autofocus=true)}}
+
+        {{form.password.label(class_="sr-only")}}
+        {{form.password(class_="form-control", placeholder="Password", autofocus=true)}}
+        
+        <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+            <div id="alert-box-email" class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+  {{form.submit(class_="btn btn-lg btn-primary btn-block")}}
+  <p class="text-center">
+    <span class="text-small">Forgot your password? <a href="{{ url_for('main.reset_request') }}" class="text-small">Click here</a></span><br>
+    <span class="text-small">Don't have an account? <a href="{{ url_for('main.signup') }}" class="text-small">Sign up</a></span>
+  </p>
+  <p class="mt-5 mb-3 text-muted">&copy;2024</p>
+</form>
+<script>
+  document.getElementById('login_email').addEventListener('input', function() {
+    console.log("Input event triggered");
+    let alertBox = document.getElementById('alert-box-email');
+    if (alertBox) {
+        alertBox.style.display = 'none';
+    }
+});
+</script>
+</body>
+</html>

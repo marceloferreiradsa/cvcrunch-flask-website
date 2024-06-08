@@ -1,0 +1,43 @@
+Base de dados Currículos
+
+id_user
+nome
+email
+linkedin
+telefone
+
+profile
+education
+professional experience
+skills
+other courses
+other activities
+
+
+Base de dados de Usuários
+
+id_user
+password
+nome
+email
+país
+cidade
+estado
+data de registro
+Código do Tipo de Conta
+Crédito
+data compra
+id compra
+valor compra
+quantidade de créditos compra
+moeda
+meio pagamento
+Ficou sabendo por onde?
+
+
+id_user
+id_sessao
+cv_sessao
+jd_sessao
+ms_sessao
+

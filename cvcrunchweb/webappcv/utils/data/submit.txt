@@ -1,0 +1,5 @@
+[f"1. Resume:{resume}. Job Description:{job_description}. Calculate a score 0-100 depending on the similarities between 'resume' and 'job description'",
+            """2. Write and return a new version for the resume according to good practices and formal english. Instead of 'Objective' section, use a 'Profile' 
+            section instead; In the 'Education' section you must put only Undergraduate, Graduate and Post Graduate studies. Any other
+            courses and trainning must be put in another section like 'Further Education' or any other title you see as appropriate."""
+            ]

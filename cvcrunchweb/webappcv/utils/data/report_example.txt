@@ -1,0 +1,12 @@
+Overall Score: 65/100
+Education: 80/100 - The candidate holds a postgraduate degree in Science/Information Studies and has completed courses related to data analysis. However, a specific quantitative discipline (computer science, mathematics, statistics, economics, physics, engineering, or a related field) is preferred for the role of Senior Data Scientist.
+Experience: 70/100 - The candidate has relevant experience in data analytics, process improvement, and project management at Banco do Brasil. The job description requires experience with data engineering projects such as ETL, model deployment, data validation, and feature calculation, which the candidate has some experience with but could be more detailed.
+Skills: 60/100 - The candidate possesses skills in R language, SQL, Python, Airflow, and other tools relevant to data science. However, the job description emphasizes experience with Python, API design, and scaling data infrastructure, which could be elaborated on in the resume.
+Language: 100/100 - The candidate has listed English as an advanced language proficiency, despite the job description does not require english, the job description is written in english and language knowledges are a valuable asset. Additional languages such as Spanish and French are a plus.
+Other Activities: 0/100 - While the candidate's involvement in producing coloring books related to Yoruba religion is commendable, it is not directly relevant to the role of Senior Data Scientist.
+Recommendations:
+1. Highlight specific projects related to data engineering, model deployment, and data validation to align more closely with the job description.
+2. Emphasize experience with Python, API design, and scaling data infrastructure.
+3. Provide more details on how past projects demonstrate a bias to practical action and creativity using data.
+4. Consider removing or minimizing the section related to producing coloring books, as it may not be directly relevant to the position.
+A revised version of the resume will be provided to enhance alignment with the job description.

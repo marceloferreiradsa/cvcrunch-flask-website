@@ -1,0 +1,82 @@
+SENIOR DATA SCIENTIST
+
+As a Data Scientist, you will balance being a prolific individual contributor to our pipelines, tables, and
+models while steering the development of our products and services through the development,
+maintenance, and application of data. You will help bridge the gap between Engineering & Modeling
+with insights while driving the development of our data services. In addition, you will help to set the
+culture, rituals, and processes that underpin a high-functioning team and the organization more
+broadly.
+
+AS A DATA SCIENTIST YOU WILL:
+
+● Build tools to manage data science modelling and development pipelines.
+
+● Development of monitoring for models and data sources; training models for validating
+correctness of inputs and matching data points to companies.
+
+● Build tools to support data extraction, matching and validation from structured and unstructured
+data sources.
+
+● Manage the model deployment process and support other team members as they deploy their
+models post-development.
+
+● Develop testing strategies to ensure our data and models perform accurately across systems.
+
+● Support the production of new data sources (e.g. web scraping, public/private APIs,) in a
+manner that minimizes development cycles while maximizing potential business applications.
+
+● Maintain a clean production environment such that the data models can be easily interpreted and
+built upon by other data science and engineering team members.
+
+● Present your work, findings, and opinions to both technical and non-technical stakeholders.
+
+
+WE LOOK FOR TEAMMATES WHO HAVE:
+
+● Bachelor/Master in quantitative discipline (computer science, mathematics, statistics,
+economics, physics, engineering or related field).
+
+● Experience with data engineering projects such as ETL, model deployment, data validation,
+feature calculation.
+
+● Familiarity with how data science teams review and validate data and machine learning models
+
+● An excellent understanding of API design, and experience designing reliable RESTful APIs.
+
+● 5+ years experience with Python
+
+● Familiarity with the tradeoffs of scaling data infrastructure and database systems.
+
+● Bias to practical action and creativity using data (we value past or present projects that support
+this).
+
+
+
+
+
+
+1.	Build tools to manage data science modelling and development pipelines.
+
+2.	Development of monitoring for models and data sources; training models for validating correctness of inputs and matching data points to companies.
+
+3.	Build tools to support data extraction, matching and validation from structured and unstructured data sources.
+
+4.	Manage the model deployment process and support other team members as they deploy their models post-development.
+
+5.	Develop testing strategies to ensure our data and models perform accurately across systems.
+
+6.	Support the production of new data sources (e.g. web scraping, public/private APIs,) in a manner that minimizes development cycles while maximizing potential business applications.
+
+7.	Maintain a clean production environment such that the data models can be easily interpreted and built upon by other data science and engineering team members.
+
+8.	Present your work, findings, and opinions to both technical and non-technical stakeholders.
+
+9.	Experience with data engineering projects such as ETL, model deployment, data validation, feature calculation.
+
+10.	Familiarity with how data science teams review and validate data and machine learning models
+
+11.	An excellent understanding of API design, and experience designing reliable RESTful APIs.
+
+12.	Familiarity with the tradeoffs of scaling data infrastructure and database systems.
+
+13.	Bias to practical action and creativity using data (we value past or present projects that support this).

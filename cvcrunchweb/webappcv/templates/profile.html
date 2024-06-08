@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link rel="icon" href="../static/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dropzone.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    </head>
+<body>
+    <div id="profile-page" class="container-fluid" >
+        <!-- Step 1: Welcome Message -->
+        <div id="profile-form" class="container">
+            <form action="/profile/picture" class="dropzone" id="profile-photo-upload">
+                <div class="dz-message needsclick">
+                    <img id="profile-img" src="{{ profile_image }}" alt="Profile Image">
+                </div>
+            </form>
+            <p>Escolha sua Foto de Perfil</p>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript" src="../static/js/dropzone.js"></script>
+    <script type="text/javascript" src="../static/js/scripts_profile.js"></script>
+   
+</body>
+</html>

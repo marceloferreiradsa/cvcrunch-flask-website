@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 563.29 563.29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #b29740;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 17px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+        font-size: 72px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        fill: #b29740;
+      }
+    </style>
+  </defs>
+  <g id="Camada_5" data-name="Camada 5">
+    <g>
+      <rect class="cls-3" width="563.29" height="563.29"/>
+      <ellipse class="cls-4" cx="456.23" cy="424.55" rx="12.35" ry="11.65"/>
+      <g>
+        <path class="cls-1" d="m516.83,140.42c-35.77,93.52-71.54,187.04-107.31,280.57-.2.52-.94.51-1.12-.02-21.62-64.3-69.45-196.02-123-254.67-2.45-2.69-7.61-8.16-15.76-13.7-47.29-32.12-134.08-24.65-183.54,28.85-55.91,60.47-52.23,154.64,8.24,210.56,57.71,53.36,147.58,49.84,200.94-7.86"/>
+        <text class="cls-2" transform="translate(82.19 307.43)"><tspan x="0" y="0">Crunch</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
