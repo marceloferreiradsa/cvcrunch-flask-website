@@ -107,9 +107,13 @@ body, html {
 }
 
 #back-step2-btn, #forw-step2-btn, #back-step3-btn, #forw-step3-btn, #back-step4-btn {
-    width: auto; /* Adjust button width as necessary */
+    width: auto;
     margin: 20px;
-    background-color: rgb(72, 72, 230)
+    background-color: rgb(72, 72, 230);
+    display: block; /* Ensure buttons are displayed */
+    opacity: 1; /* Ensure buttons are fully opaque */
+    visibility: visible; /* Ensure buttons are visible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
 }
 
 .cv-crunch-header {

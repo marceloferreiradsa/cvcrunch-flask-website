@@ -7,11 +7,7 @@ from flask_login import UserMixin
 from .extensions import db
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(user_id)
 
-# Define a model for the 'users' table
 class User(db.Model, UserMixin):
     __tablename__= 'users'
     user_id = db.Column(db.String(36), primary_key=True, default=uuid.uuid4)
@@ -30,3 +26,6 @@ class User(db.Model, UserMixin):
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)

@@ -2,21 +2,18 @@ import os
 import uuid
 import time
 import json
-import glob
-from flask import (Blueprint, render_template, jsonify, flash, 
-                   request, session, redirect, url_for)
+from flask import Blueprint, render_template, jsonify, flash, request, session, redirect, url_for
 from flask import current_app as app
 from flask_login import login_user, current_user, login_required, logout_user
 from flask_wtf.csrf import generate_csrf, CSRFProtect, CSRFError, validate_csrf
-from openai import OpenAI
 from werkzeug.utils import secure_filename
+from werkzeug.exceptions import BadRequest
 from .utils.parse import allowed_file, parse_file, ALLOWED_EXTENSIONS
 from .utils.api_call import load_file, call_openai_api
 from .utils.models import User, db
 from .utils.forms import LoginForm, SignupForm, ResetRequestForm, ResetPasswordForm
 from .utils.reset import get_reset_token, verify_reset_token, send_reset_email
 from .utils.fetch_image import get_photo_url
-from werkzeug.exceptions import BadRequest
 
 main = Blueprint('main', __name__)
 
@@ -33,7 +30,7 @@ def home():
     else:
         print("não antenticado")
         existing_image = '../static/images/sillouete_1.webp'
-    return render_template('index.html', profile_image = existing_image)
+    return render_template('index.html', profile_image=existing_image)
 
 @main.route('/login', methods=['GET', 'POST'])
 def login():
