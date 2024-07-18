@@ -238,6 +238,18 @@ def handle_csrf_error(e):
         return 'CSRF error: ' + str(e.description), 400
 
       
+@main.route('/success')
+def success():
+    return render_template('success.html')
+
+@main.route('/failure')
+def failure():
+    return render_template('failure.html')
+
+@main.route('/pending')
+def pending():
+    return render_template('pending.html')
+
 @main.route('/logout')
 def logout():
     logout_user()

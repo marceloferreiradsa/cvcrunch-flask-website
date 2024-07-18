@@ -1,0 +1,82 @@
+About the job
+BRP is seeking a Data Business Analyst who will be participating to support our Data Platform Modernization (DPM) project at BRP. This position will be responsible for supporting data management, data quality and analysis activities within the project scope. responsible to support and enable the Data Stewards in standardizing the Master data design within MDM scope based on input from the business sectors (Business Process Lead and Data Stewards). This is an exciting opportunity to drive activities that will leverage the value of our data to support the innovation, revenue growth, and increased efficiency through effective management of our data assets.
+
+You'll Have The Opportunity To
+
+Data Management :
+
+Perform business process analysis, identify gaps and inefficiencies, propose solutions and plans to streamline; as well as contribute to the definition and implementation of data management and quality processes that enable the optimal and secure use of data, while respecting compliance, privacy, confidentiality and security policies.
+Work in collaboration with the Data Stewards to ensure data standards (data model, data object policies), X-reference and list of value, business rules, work flows and supporting transactions are aligned with the MDM Standard Template. 
+Provide the technical expertise and guideline on master data configuration, data maintenance processes, and its complete end to end process. This includes the interfaces, transport/release management, master data maintenance tool, etc.
+Ability to understand and gather the business rules of critical data element and enforce the application of defined business rules, data standards, data policies and data management processes
+Optimize the usage of the system and the business process already in flight.
+Support decommission strategy and execution of legacy data warehouse.
+Document and contribute/lead the implementation of required change through the process (interface to IT support, impact analysis, data changes, testing etc.).
+Ensure changes to business processes are coordinated with the Data Stewards, other process owners and backward integrated to legacy data-warehouse.
+Proactively monitor data accuracy and facilitate required data corrective actions with business owners. This includes leading the establishment of the monitoring framework on critical data elements, including the tool and its enforcement.
+
+Data Quality 
+
+Provide expertise, guidance and contribution on the development, sustenance and improvement of the Data Quality Program. This includes:
+Establishing the process governance related to data quality to ensure data accuracy, viability, traceability, integrity and value
+Identifying data quality risk, facilitating root-cause analysis, resolving and communicating data quality issues impacting business analytics
+Building the data quality monitors, models, processes, and controls
+Participating in the projects to provide expertise and advise on the framework of data quality guidelines and standards; that includes data quality assessment, monitoring and validation approach.
+Aligning activities and deliverables of the Data Quality Program to the Data Governance Framework and roadmap and contributing to the data strategy mandate
+Establish and maintain effective communications and working relationships with the stakeholders to ensure quality and integrity of BRP data.
+Serve as a subject matter Expert on data quality aspects of the BRP reporting and analytics data which includes: collaborate with the data engineers in the development of complex queries and reports to extract, merge and compile data; in-depth knowledge of business rules for data transformation, business definitions, dimensions and measures.
+Build and deliver comprehensive and professional data quality metrics/dashboards, reports and/or presentations for BRP management, tailoring deliverables to appropriate level of detail.
+Develop and maintain comprehensive documentation including policies and process governance for all data quality processes, procedures, metrics and controls.
+Provide coaching in support of Data Quality initiatives by identifying training needs, providing support for any formal training required to maintain data quality and integrity, provide mentoring on the understanding of BRP data.
+Data Analysis
+
+Design, build, deliver and maintain world-class reporting for all business areas by using Power BI.
+Translates conceptual customer requirements into functional requirements in a clear manner that is comprehensible to developers, project and analytics teams.
+Develop deep understanding of the various business processes, data sets and BI deliverables
+Perform data analysis and profiling in a huge volume of data.
+Perform preliminary data validation activities, identify any anomalies, build the summary and inform the business owner for further data validation.
+Support SOX validation process through documentation preparation.
+Use knowledge of the specific data products available and visualization capabilities to enhance requirements and provide insightful suggestions to business stakeholders.
+Prioritize work with the team and ensure there is a forward looking roadmap for features to be delivered on the data products their domain team is tasked with.
+Assist in the daily support of end-users’ ability to effectively and efficiently utilize the reporting platform.
+
+YOU’LL THRIVE IN THIS ROLE IF YOU HAVE THE FOLLOWING SKILLS AND QUALITIES:
+
+Bachelor's degree in business technology, computer science, Mathematics, information systems or a related study, or equivalent related project experience.
+5+ years experience in the field of Data Quality or data analysis within a data warehouse or data management environment with the focus on intensive data usage; In-depth understanding and application of Data Quality principles across the data lifecycle.
+Familiarity with Data Quality platforms, such Informatica, Collibra, MonteCarlo, etc.is preferred.
+Knowledge of linking technical elements (Data Models) to business elements (Business process mapping) is preferred.
+Working knowledge of BI and data warehouse concepts and terminology.
+Significant experience in SQL
+Experience building reports in PowerBI, Tableau, Qlik, BOBJ, MSTR or similar platforms.
+Working experience with Finance modules is an asset. 
+Proven experience with business and technical requirements analysis, modeling, verification, and methodology development.
+Proficiency with Microsoft Word, PPT, and Excel.
+Demonstrated organizational and project management skills with proven ability to meet deadlines, prioritize assignments and manage multiple projects; Issue management experience.
+Strong ability to work in undiscovered, unstructured territories and to formalize processes that are currently not formalized.
+Excellent verbal and written communication skills to influence and orient business and technical audiences toward a common goal that is satisfying all stakeholders.
+Strong analytical skills and experience with working with Key Performance Indicators.
+Attention to details and ability to deliver a mandate with great autonomy – self-driven.
+
+Assets
+
+Considered As a Strong Asset
+
+Knowledge of data visualization software (Power BI, Tableau, etc.)
+Knowledge of database structures and querying tools (SQL, MySQL, OLAP, Data Warehouse, etc.)
+
+THE ROAD SHOULD BELONG TO EVERYONE.
+
+We still live in a world where many feel the road is for other people. We believe we can make a difference. Moving people goes beyond making innovative products.
+
+We strive to nurture our people’s aspirations, to exceed our riders’ expectations and stand in solidarity with all the communities that ride with us.
+
+Building a more inclusive BRP with no barriers for those who seek to ride starts from within, and we need everyone's commitment, drive and dedication to make it a reality.
+
+WELCOME TO BRP
+
+We’re a world leader in recreational vehicles and boats, creating innovative ways to move on snow, water, asphalt, dirt and even in the air. Headquartered in the Canadian town of Valcourt, Quebec, our company is rooted in a spirit of ingenuity and intense customer focus. Today, we operate manufacturing facilities in Canada, the United States, Mexico, Finland, Australia and Austria, with a workforce made up of close to 23,000 spirited people, all driven by the deeply held belief that at work, as with life itself, it’s not about the destination; It’s about the journey.
+
+This position is based in Campinas, Brazil and is eligible to the BRP Employee Referral Program.
+
+You will have the opportunity to work in hybrid mode, 2 to 3 days in the office.

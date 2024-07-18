@@ -1,0 +1,40 @@
+About the job
+O Analista de Dados BI Junior, irá desempenhar um papel crucial na análise de dados e na criação de visualizações gerenciais significativas para fornecer insights valiosos e impulsionar a tomada de decisões do time de Customer Service e Logística e demais áreas da organização.
+
+
+UM SABOR DO QUE VOCÊ VAI FAZER
+
+Criar dashboards interativos, relatórios e análises no Power BI;
+Importar, transformar e modelar dados de diversas fontes para criar conjuntos de dados eficientes no Power BI;
+Manter-se atualizado com as tendências e avanços nas Tecnologias de BI;
+Compreender os requisitos analíticos do negócio e transformá-los em soluções práticas usando o Power BI;
+Analisar dados para identificar tendências, padrões e insights valiosos;
+Propor e implementar melhorias contínuas nos processos e ferramentas existentes;
+Criar dashboards e relatórios visualmente atrativos e eficazes;
+Compreensão dos princípios de boas práticas de visualização de dados para garantir a clareza e a interpretação correta das informações apresentadas;
+Consultar através de SQL para extrair dados de bancos de dados e realizar manipulações necessárias antes da importação para o Power BI;
+Otimizar consultas e modelagem de dados para garantir desempenho eficiente;
+Realizar manutenção e atualização de relatórios, visualizações de dados (Power BI, Excel, VBA);
+Colaborar com equipes interdisciplinares e traduzir requisitos de negócios em soluções técnicas;
+Identificar e resolver problemas relacionados a dados e relatórios, bem como propor melhorias contínuas nos processos;
+Aprender novas tecnologias e métodos relacionados ao Power BI;
+Gerenciar tarefas e prioridades de forma eficiente;
+Colaborar efetivamente com outros membros da equipe, compartilhar conhecimentos e contribuir para o sucesso conjunto, além de apoiar na capacitação de colaboradores e stakeholders para uso eficaz das ferramentas de BI.
+ 
+SUA RECEITA PARA O SUCESSO
+
+Experiência sólida no uso do Power BI para criar dashboards interativos, relatórios e análises;
+Possuir ensino superior completo em Ciências da Dados, Sistemas de Informação, Engenharias ou similares;
+Forte capacidade de análise, organizacional, interpessoal, comunicação, apresentação e gestão do tempo.
+ 
+PRÓXIMO PASSO
+
+Depois de se inscrever, sua inscrição será revisada por um recrutador real - não por um bot. Isso significa que podemos demorar um pouco para voltar com você, então assista sua caixa de entrada para atualizações. Enquanto isso, visite nossa página Como contratamos para obter insights sobre nosso processo de contratação e como se preparar melhor para uma entrevista na Kellanova.
+
+
+SOBRE KELLANOVA
+
+A Kellanova é uma empresa líder em lanches globais, cereais e macarrão internacionais, alimentos à base de plantas e café da manhã congelado da América do Norte e um portfólio de marcas icônicas e de classe mundial, incluindo Pringles, Cheez-It, Pop-Tarts, Rice Krispies Treats da Kellogg, Fazendas Morningstar, Incogmeato, Gardenburger, Nutri-Grain, RXBAR e Eggo. Também administramos um conjunto de marcas de cereais internacionais amadas, incluindo Kellogg’s, Frosties, Sucrilhos, Special K, Krave, Miel Pops, Coco Pops e Crunchy Nut, entre outros.
+Na Kellanova, estamos comprometidos com Equidade, Diversidade e Inclusão (ED&I), elevando uns aos outros e abraçando nossas diferenças para alcançar nossos objetivos comuns. Nosso foco em ED&I nos permite construir uma cultura onde todos os funcionários são inspirados a compartilhar sua paixão, talentos, ideias e podem trazer a si mesmos autênticos para o trabalho. Saiba mais aqui.
+Estamos orgulhosos de oferecer benefícios de saúde totais competitivos do setor (físicos, financeiros, emocionais e sociais) que variam dependendo da região e do tipo de função. Certifique-se de pedir mais informações ao seu recrutador!
+Equipe de Recrutamento.
