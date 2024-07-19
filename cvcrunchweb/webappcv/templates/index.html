@@ -21,6 +21,7 @@
         <div id="step2" class="form-section">
             <h2>Upload your resume</h2>
                 <form action="/upload" class="dropzone dz-custom" id="my-dropzone">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
                     <div class="dz-message needsclick">
                         <img class="image-view" src="{{ url_for('static', filename='images/button.png') }}">
                         <p>Drag and drop or click here <br> to upload your resume</p>

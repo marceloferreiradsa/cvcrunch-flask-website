@@ -50,8 +50,10 @@ $(document).ready(function(){
         dictDefaultMessage: "Drag and drop or click here to upload your resume", // Custom message
         maxFiles: 1,
         // Other Dropzone options...
-        sending: function(file, xhr, formData) {
-            formData.append("csrf_token", csrfToken); // Append the CSRF token to formData
+        init: function() {
+            this.on("sending", function(file, xhr, formData) {
+                formData.append("csrf_token", csrfToken); // Append the CSRF token to formData
+            });
         }
     });
 
@@ -94,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+/*
 document.getElementById('forw-step3-btn').addEventListener('click', async function() { // Note the async keyword
     var textArea = document.getElementById('textPasteArea');
     var text = textArea.value;
@@ -135,6 +138,53 @@ document.getElementById('forw-step3-btn').addEventListener('click', async functi
         displayMessage('Error processing request');
     }
 });
+*/
+
+document.getElementById('forw-step3-btn').addEventListener('click', async function() { // Note the async keyword
+    var textArea = document.getElementById('textPasteArea');
+    var text = textArea.value;
+    var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // Get the CSRF token from the meta tag
+
+    // Show loading message or spinner
+    displayMessage('Processing... Please wait.');
+
+    try {
+        // First, process the text
+        let textResponse = await fetch('/textPaste', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken // Include the CSRF token in the headers
+            },
+            body: JSON.stringify({ text: text }),
+        });
+        let textData = await textResponse.json();
+        displayMessage('Text successfully processed');
+
+        // Now call the API
+        let apiResponse = await fetch('/apiCall', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken // Include the CSRF token in the headers
+            },
+            body: JSON.stringify({ text: 'API Called!' }),
+        });
+        let apiData = await apiResponse.json();
+        displayMessage('API call successfully processed');
+
+        // Fetch and display results from the final API call
+        let finalResponse = await fetch('/report'); // Make sure this should be an await if you are expecting to wait for the result
+        let finalData = await finalResponse.json(); // Convert the response to JSON
+        console.log(finalData); // For example, log the data
+        displayContent(finalData);
+
+    } catch (error) {
+        console.error('Error:', error);
+        displayMessage('Error processing request');
+    }
+});
+
 
 function displayContent(data) {
     // Here we parse the 'content' to make it more readable and split into sections

@@ -2,6 +2,7 @@ import os
 import uuid
 import time
 import json
+from openai import OpenAI
 from flask import Blueprint, render_template, jsonify, flash, request, session, redirect, url_for
 from flask import current_app as app
 from flask_login import login_user, current_user, login_required, logout_user
@@ -14,7 +15,7 @@ from .utils.models import User, db, Profile
 from .utils.forms import LoginForm, SignupForm, ResetRequestForm, ResetPasswordForm, ProfileForm
 from .utils.reset import get_reset_token, verify_reset_token, send_reset_email
 from .utils.fetch_image import get_photo_url
-from  . import logging
+#from  . import logging
 
 
 main = Blueprint('main', __name__)
@@ -25,6 +26,7 @@ def refresh_csrf():
 
 @main.route('/')
 def home():
+    csrf_token = generate_csrf()
     if current_user.is_authenticated:
         user_id = current_user.user_id
         existing_image = get_photo_url(user_id)
@@ -32,7 +34,7 @@ def home():
     else:
         print("não antenticado")
         existing_image = '../static/images/sillouete_1.webp'
-    return render_template('index.html', profile_image=existing_image)
+    return render_template('index.html', profile_image=existing_image, csrf_token=csrf_token)
 
 @main.route('/login', methods=['GET', 'POST'])
 def login():
@@ -228,7 +230,7 @@ def profile():
 
     # Handle form submission
     if form.validate_on_submit():
-        logging.debug("Form is valid, processing the data")
+        #logging.debug("Form is valid, processing the data")
         profile = Profile.query.filter_by(user_id=current_user.user_id).first()
         if profile is None:
             profile = Profile(user_id=current_user.user_id)
@@ -246,16 +248,17 @@ def profile():
         try:
             db.session.add(profile)
             db.session.commit()
-            logging.debug("Profile data saved successfully")
+            #logging.debug("Profile data saved successfully")
             flash('Your profile has been updated', 'success')
         except Exception as e:
-            logging.error(f"Error saving profile data: {e}")
+            #logging.error(f"Error saving profile data: {e}")
             db.session.rollback()
             flash('An error occurred while updating your profile. Please try again.', 'danger')
         return redirect(url_for('main.profile'))  # Redirect to avoid form resubmission
     else:
         if form.errors:
-            logging.debug(f"Form errors: {form.errors}")
+            pass
+            #logging.debug(f"Form errors: {form.errors}")
 
     # If the request method is GET, populate the form with existing data
     profile = Profile.query.filter_by(user_id=current_user.user_id).first()
