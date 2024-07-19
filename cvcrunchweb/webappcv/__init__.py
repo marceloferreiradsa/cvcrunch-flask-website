@@ -3,14 +3,19 @@ import os
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from .utils.extensions import db
 from flask_wtf import CSRFProtect
 from flask_mail import Mail
 from dotenv import load_dotenv
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 login_manager = LoginManager()
 csrf = CSRFProtect()
 mail = Mail()
+migrate = Migrate()  # Initialize Flask-Migrate
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -37,6 +42,7 @@ def create_app():
     app.config['MAIL_USE_SSL'] = True
 
     db.init_app(app)
+    migrate.init_app(app, db)  # Bind Flask-Migrate to your app and database
     Bootstrap(app)
     login_manager.init_app(app)
     csrf.init_app(app)

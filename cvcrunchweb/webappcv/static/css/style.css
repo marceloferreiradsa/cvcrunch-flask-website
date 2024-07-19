@@ -5,9 +5,26 @@
     box-sizing: border-box;
 }
 
-body, html {
-    overflow-y: auto; /* Disable scrolling on the page globally */
+body.no-scroll, html.no-scroll {
+    overflow: hidden; /* Disable scrolling for pages with the no-scroll class */
+    position: fixed;
+    width: 100%;
 }
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto; /* Enable scrolling on the page globally */
+}
+
+.navbar {
+    height: 70px; /* Ensure the height is set */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it is on top of other elements */
+}
+
 
 .resume {
     width: 100%;
@@ -150,11 +167,31 @@ h4 {
     font-weight: normal;
 }
 
-/* Custom CSS for the profile page */
 .profile-page {
     padding-top: 70px; /* Create space for the navbar */
-    
     height: calc(100vh - 70px); /* Ensure it takes the full viewport height minus the navbar height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.profile-page .dropzone {
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-page .dz-message {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .profile-page #profile-img {

@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Email, EqualTo
+from wtforms import StringField, PasswordField, SubmitField, URLField, TelField
+from wtforms.validators import DataRequired, Email, EqualTo, URL, Optional
 from wtforms import ValidationError
 from .models import User
 
@@ -31,3 +31,18 @@ class ResetPasswordForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     conf_password = PasswordField('Confirm Password', validators=[DataRequired(),EqualTo('password', message="Passwords Must Match")])
     submit = SubmitField('Reset Password')
+
+class ProfileForm(FlaskForm):
+    full_name = StringField('Full Name', validators=[DataRequired()])
+    email = StringField('Email', render_kw={'readonly': True}) 
+    phone = TelField('Phone Number', validators=[DataRequired()])
+    street_address = StringField('Street Address', validators=[DataRequired()])
+    zip_code = StringField('Zip Code', validators=[DataRequired()])
+    city = StringField('City', validators=[DataRequired()])
+    state = StringField('State', validators=[DataRequired()])
+    country = StringField('Country', validators=[DataRequired()])
+    linkedin = URLField('LinkedIn Profile', validators=[Optional(), URL()])
+    instagram = URLField('Instagram', validators=[Optional(), URL()])
+    facebook = URLField('Facebook', validators=[Optional(), URL()])
+    github = URLField('GitHub', validators=[Optional(), URL()])
+    submit = SubmitField('Save Profile')

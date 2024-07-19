@@ -10,10 +10,12 @@ from werkzeug.utils import secure_filename
 from werkzeug.exceptions import BadRequest
 from .utils.parse import allowed_file, parse_file, ALLOWED_EXTENSIONS
 from .utils.api_call import load_file, call_openai_api
-from .utils.models import User, db
-from .utils.forms import LoginForm, SignupForm, ResetRequestForm, ResetPasswordForm
+from .utils.models import User, db, Profile
+from .utils.forms import LoginForm, SignupForm, ResetRequestForm, ResetPasswordForm, ProfileForm
 from .utils.reset import get_reset_token, verify_reset_token, send_reset_email
 from .utils.fetch_image import get_photo_url
+from  . import logging
+
 
 main = Blueprint('main', __name__)
 
@@ -206,13 +208,72 @@ def test_db():
         print('No user found')
     return f'Check your terminal for output!'
 
-@main.route('/profile')
+@main.route('/profile', methods=['GET', 'POST'])
+@login_required
 def profile():
+    # Check if the user is authenticated
     if not current_user.is_authenticated:
-       redirect(url_for('main.login'))
+        return redirect(url_for('main.login'))
+
+    # Get the existing image or set a default image
+    existing_image = get_photo_url(current_user.user_id)
+    if not existing_image:
+        existing_image = url_for('static', filename='images/default_profile_image.png')
+
+    # Initialize the profile form
+    form = ProfileForm()
+
+    # Prepopulate the email field with the current user's email and make it readonly
+    form.email.data = current_user.email
+
+    # Handle form submission
+    if form.validate_on_submit():
+        logging.debug("Form is valid, processing the data")
+        profile = Profile.query.filter_by(user_id=current_user.user_id).first()
+        if profile is None:
+            profile = Profile(user_id=current_user.user_id)
+        profile.full_name = form.full_name.data
+        profile.phone = form.phone.data
+        profile.street_address = form.street_address.data
+        profile.zip_code = form.zip_code.data
+        profile.city = form.city.data
+        profile.state = form.state.data
+        profile.country = form.country.data
+        profile.linkedin = form.linkedin.data
+        profile.instagram = form.instagram.data
+        profile.facebook = form.facebook.data
+        profile.github = form.github.data
+        try:
+            db.session.add(profile)
+            db.session.commit()
+            logging.debug("Profile data saved successfully")
+            flash('Your profile has been updated', 'success')
+        except Exception as e:
+            logging.error(f"Error saving profile data: {e}")
+            db.session.rollback()
+            flash('An error occurred while updating your profile. Please try again.', 'danger')
+        return redirect(url_for('main.profile'))  # Redirect to avoid form resubmission
     else:
-        existing_image = get_photo_url(current_user.user_id)
-    return render_template('profile.html', profile_image=existing_image)
+        if form.errors:
+            logging.debug(f"Form errors: {form.errors}")
+
+    # If the request method is GET, populate the form with existing data
+    profile = Profile.query.filter_by(user_id=current_user.user_id).first()
+    if profile:
+        form.full_name.data = profile.full_name
+        form.phone.data = profile.phone
+        form.street_address.data = profile.street_address
+        form.zip_code.data = profile.zip_code
+        form.city.data = profile.city
+        form.state.data = profile.state
+        form.country.data = profile.country
+        form.linkedin.data = profile.linkedin
+        form.instagram.data = profile.instagram
+        form.facebook.data = profile.facebook
+        form.github.data = profile.github
+
+    # Render the template with the form and profile image
+    return render_template('profile.html', form=form, profile_image=existing_image)
         
 @main.route('/profile/picture', methods=['POST'])
 def handle_upload():
