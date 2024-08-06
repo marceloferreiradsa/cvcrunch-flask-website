@@ -5,56 +5,70 @@
 {% block body_class %}no-scroll{% endblock %}
 
 {% block content %}
-    <!-- Step 1: Welcome Message -->
-    <div id="step1" class="form-section bg-light">
-        <h2>Welcome!</h2>
-        <h5>Let's make your resume Crunchy?</h5>
+<div class="container-fluid d-flex justify-content-center align-items-center conteudo">
+    <div class="row text-center w-100">
         {% if current_user.is_authenticated %}
-        <button class="btn btn-primary" id='step1-btn' >Yes, start now!</button>
-        {% else %}
-        <h4><a href="{{ url_for('main.login') }}">Login</a> or <a href="{{ url_for('main.signup') }}">Sign up</a> to Start.</h4>
-        {% endif %}
-    </div>
+        <!-- Card 1: Resume Upload -->
+        <div class="d-flex justify-content-center col-md-12 col-lg-4 mb-3">
+            <form action="/upload" class="dropzone dz-custom" id="my-dropzone">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                <div class="dz-message needsclick">
+                    <p>Arraste seu currículo para cá<br> ou clique para fazer o upload</p>
+                </div>
+                <!-- Wrap buttons in a div with appropriate classes -->
+                <div class="d-flex justify-content-around row dropzone-buttons">
+                    <button class="btn btn-primary mt-3">Upload</button>
+                    <button class="btn btn-secondary mt-3">Clear</button>
+                </div>
+            </form>
+        </div>
 
-    <!-- Step 2: Upload File -->
-    <div class="container mt-5 txt-custom">
-        <div id="step2" class="form-section">
-            <h2>Upload your resume</h2>
-                <form action="/upload" class="dropzone dz-custom" id="my-dropzone">
-                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-                    <div class="dz-message needsclick">
-                        <img class="image-view" src="{{ url_for('static', filename='images/button.png') }}">
-                        <p>Drag and drop or click here <br> to upload your resume</p>
-                    </div>
-                </form>
-            <div class="row">
-                <button class="btn btn-primary" id="back-step2-btn">Voltar</button>
-                <button class="btn btn-secondary" id="forw-step2-btn" >Continuar</button>
+        <!-- Card 2: Job Description Upload -->
+        <div class="d-flex justify-content-center col-md-12 col-lg-4 mb-3">
+            <div class="text-container">
+                <textarea class="form-control fc-custom" placeholder="Cole a descrição da vaga aqui..." rows="10"></textarea>
+            <div class="d-flex justify-content-around resume-buttons">
+                <button class="btn btn-primary mt-3">Save</button>
+                <button class="btn btn-secondary mt-3">Clear</button>
+            </div>
             </div>
         </div>
-    </div>
 
-    <!-- Step 3: Paste Job Description -->
-    <div id="step3" class="form-section">
-        <h2>Paste the Job Description</h2>
-        <div class="text-container">
-            <textarea class="form-control fc-custom" id="textPasteArea" placeholder="Paste your text here..." rows="10"></textarea>
+        <!-- Card 3: Additional Options -->
+<div class="d-flex justify-content-center col-md-12 col-lg-4 mb-3">
+    <div class="card custom-card">
+        <h5>Selecione uma ou mais opções</h5>
+        
+        <!-- Squares added inside the custom-card -->
+        <div class="squares-container d-flex flex-column align-items-center">
+            <!-- First Row of Squares -->
+            <div class="d-flex justify-content-center">
+                <div class="square mx-2 square1"></div>
+                <div class="square mx-2 square2"></div>
+            </div>
+            <!-- Second Row of Squares -->
+            <div class="d-flex justify-content-center">
+                <div class="square mx-2 square3"></div>
+                <div class="square mx-2 square4"></div>
+            </div>
         </div>
-        <div class="row">
-            <button class="btn btn-secondary" id="back-step3-btn">Voltar</button>
-            <button class="btn btn-primary" id="forw-step3-btn" >Continuar</button>
+        
+        <!-- Existing buttons or other content -->
+        <div class="d-flex justify-content-around option-buttons">
+            <button class="btn btn-primary mt-3">Confirm</button>
+            <button class="btn btn-secondary mt-3">Cancel</button>
         </div>
-        <div id="messageArea"></div>
     </div>
-
-    <!-- Step 4: Data Analysis -->
-    <div id="step4" class="form-section">
-        <h2>Data being analyzed...</h2>
-        <div id="analysisResult">
-            <!-- Placeholders where the data will be inserted -->
-            <div id="content"></div>
-            <div id="role"></div>
+</div>
+        {% else %}
+        <!-- If not authenticated, show login/signup options -->
+        <div class="col-md-12 mb-3">
+            <div class="p-3 bg-light border rounded">
+                <h2>Welcome!</h2>
+                <h4><a href="{{ url_for('main.login') }}">Login</a> or <a href="{{ url_for('main.signup') }}">Sign up</a> to start.</h4>
+            </div>
         </div>
-        <button class="btn btn-primary" id="back-step4-btn">Back</button>
+        {% endif %}
     </div>
+</div>
 {% endblock %}

@@ -1,74 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Step-by-Step Form</title>
-    <link href="../static/css/style.css" rel="stylesheet">
-    <link rel="icon" href="../static/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/dropzone.css" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+{% extends "base.html" %}
 
-    
+{% block title %}Home{% endblock %}
 
-</head>
-<body>
-    <header class="text-bg-dark fixed-top cv-crunch-header">
-        <div class="container-fluid">
-          <div class="d-flex flex-wrap justify-content-between align-items-center">
-                
-            <ul class="nav col-12 col-lg-auto  mb-2 mb-md-0 align-items-center">
-              <li><a href="#" class="nav-link d-flex align-items-center">
-                <img src="../static/images/cv crunch2.png" alt="Logo" style="height: 60px;"> <!-- Adjust the height as needed -->
-                  </a>
-              </li> 
-              <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-            </ul>
-            <div class="d-flex align-items-center">
-                <form class="col-10 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                <input type="search" class="form-control form-control-dark text-bg-dark" id="form-search" placeholder="Search..." aria-label="Search">
-                </form>
-        
-                <div class="nav-buttons">
-                    {% if current_user.is_authenticated %}
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ profile_image }}" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{{ url_for('main.profile') }}">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="{{ url_for('main.logout') }}">Logout</a></li>
-                            </ul>
-                        </div>
-                    {% else %}
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ profile_image }}" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{ url_for('main.login') }}">Log in</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.signup') }}">Sign up</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                        </ul>
-                    </div>
-                        <!--
-                        <button type="button" id="login" data-url="{{ url_for('main.login') }}" class="btn btn-outline-light mb-lg-0 mb-2">Login</button>
-                        <button type="button" id="signup" data-url="{{ url_for('main.signup') }}" class="btn btn-warning mb-lg-0 mb-2">Sign up</button>
-                        -->
-                    {% endif %}
-                </div>
-            </div>
-          </div>
-        </div>
-      </header>
+{% block body_class %}no-scroll{% endblock %}
 
-<div class="container-fluid p-0">
+{% block content %}
     <!-- Step 1: Welcome Message -->
     <div id="step1" class="form-section bg-light">
         <h2>Welcome!</h2>
@@ -85,8 +21,9 @@
         <div id="step2" class="form-section">
             <h2>Upload your resume</h2>
                 <form action="/upload" class="dropzone dz-custom" id="my-dropzone">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
                     <div class="dz-message needsclick">
-                        <img class="image-view" src="../static/images/button.png">
+                        <img class="image-view" src="{{ url_for('static', filename='images/button.png') }}">
                         <p>Drag and drop or click here <br> to upload your resume</p>
                     </div>
                 </form>
@@ -120,17 +57,4 @@
         </div>
         <button class="btn btn-primary" id="back-step4-btn">Back</button>
     </div>
-</div>
-   
-    <script src="../static/js/jquery.js"></script>
-         
-    <script type= "text/javascript" src="{{ url_for('static', filename='bootstrap.js') }}"></script>
-    <script type= "text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script type="text/javascript" src="../static/js/dropzone.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-
-    
-    
-</body>
-</html>
+{% endblock %}

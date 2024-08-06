@@ -45,3 +45,5 @@ def gerar_link_pagamento():
 	preference_response = sdk.preference().create(request)
 	preference = preference_response["response"]
 	return	preference['sandbox_init_point']
+
+print(gerar_link_pagamento())

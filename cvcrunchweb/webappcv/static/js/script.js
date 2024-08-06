@@ -1,4 +1,5 @@
 // Function to prevent scrolling
+/*
 function preventScroll(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -19,6 +20,7 @@ function enableScroll() {
     window.removeEventListener('keydown', preventScrollKeys, { passive: false });
 }
 
+
 // Function to prevent scrolling with keys
 function preventScrollKeys(e) {
     const keys = { ArrowLeft: 1, ArrowUp: 1, ArrowRight: 1, ArrowDown: 1, Space: 1, PageDown: 1, PageUp: 1 };
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         enableScroll();
     }
 });
-
+*/
 // Existing code for Dropzone and other functionalities...
 
 $(document).ready(function(){
@@ -95,50 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-/*
-document.getElementById('forw-step3-btn').addEventListener('click', async function() { // Note the async keyword
-    var textArea = document.getElementById('textPasteArea');
-    var text = textArea.value;
-
-    // Show loading message or spinner
-    displayMessage('Processing... Please wait.');
-
-    try {
-        // First, process the text
-        let textResponse = await fetch('/textPaste', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ text: text }),
-        });
-        let textData = await textResponse.json();
-        displayMessage('Text successfully processed');
-
-        // Now call the API
-        let apiResponse = await fetch('/apiCall', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ text: 'API Called!' }),
-        });
-        let apiData = await apiResponse.json();
-        displayMessage('API call successfully processed');
-
-        // Fetch and display results from the final API call
-        let finalResponse = await fetch('/report'); // Make sure this should be an await if you are expecting to wait for the result
-        let finalData = await finalResponse.json(); // Convert the response to JSON
-        console.log(finalData); // For example, log the data
-        displayContent(finalData);
-
-    } catch (error) {
-        console.error('Error:', error);
-        displayMessage('Error processing request');
-    }
-});
-*/
 
 document.getElementById('forw-step3-btn').addEventListener('click', async function() { // Note the async keyword
     var textArea = document.getElementById('textPasteArea');
