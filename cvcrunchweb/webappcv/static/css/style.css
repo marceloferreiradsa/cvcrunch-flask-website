@@ -7,6 +7,7 @@
 }
 
 body {
+    background-color: #9fc3b7 !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -14,6 +15,7 @@ body {
 }
 
 body, html {
+    min-width: 320px;
     height: 100%;
     margin: 0;
     padding: 0px;
@@ -34,6 +36,27 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+body header .cv-crunch-header  {
+    background-color: #2a2e37;  
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    
+}
+.cv-crunch-header .nav-link {
+    color: #f0f0f0 !important;
+    /*text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);*/
+}
+
+.nav-buttons button {
+    min-width: 90px;
+    min-height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 li {
@@ -45,16 +68,21 @@ li {
 
 footer {
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #2a2e37;
     width: 100%;
     margin-top: auto;
     position: relative;    
     text-align: center;
     justify-content: center;
+    color:#f0f0f0;
 }
 
 footer .social .text-body-secondary {
     padding: 10px;
+}
+
+.container footer {
+    margin-bottom: 0 !important;
 }
 
 
@@ -72,37 +100,6 @@ footer .social .text-body-secondary {
     align-items: center;
 }
 
-#back-step2-btn,
-#forw-step2-btn,
-#back-step3-btn,
-#forw-step3-btn,
-#back-step4-btn {
-    width: auto;
-    margin: 20px;
-    background-color: rgb(72, 72, 230);
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-body header .cv-crunch-header  {
-    background-color: #f0f0f0;  
-    color: #333;  
-    box-shadow: 0px 8px 10px 0 rgba(0, 0, 0, 0.5);
-}
-.cv-crunch-header .nav-link {
-    color: #333 !important;
-    text-shadow: 1px 1px 2px rgba(100, 100, 100, 0.6);
-}
-
-.nav-buttons button {
-    min-width: 90px;
-    min-height: 30px;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
 h2,
 h4 {
     text-align: center;
@@ -118,111 +115,8 @@ h4 {
     font-weight: normal;
 }
 
-.profile-page {
-    height: calc(100vh - 70px); /* Ensure it takes the full viewport height minus the navbar height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-}
-
-#profile-page-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-#profile-page-scroll {
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-}
-
-.profile-page .profile-img-photo {
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-page .dropzone {
-    width: 150px;
-    height: 150px;
-    padding: 0;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-page .dz-message {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-page #profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-top: 30px;
-}
-
-.profile-page .card-header {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
-}
-
-.profile-page .card-body {
-    padding: 30px;
-}
-
-.profile-page .form-group {
-    margin-bottom: 1.5rem;
-}
-
-.profile-page .form-check-label a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.profile-page .form-check-label a:hover {
-    text-decoration: underline;
-}
-
-.profile-page .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-}
-
-.profile-page .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-}
-
-/* Hide the default message */
-.profile-page .dz-default.dz-message,
-.profile-page .dz-default.dz-message span {
-    display: none;
-}
-
-.profile-img-photo .dz-message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile-img-photo .dz-label {
-    font-size: 10px; 
-    color: #1c1cf3; 
-    text-align: center;
-    display: block; 
-}
-
-.profile-card {
-    height: calc(100vh - 140px); 
-    overflow-y: auto; 
-    box-sizing: border-box; 
-}
-
 .dropzone {
+    position: relative;
     width: 100%; 
     height: 100%;
     text-align: center;
@@ -231,9 +125,85 @@ h4 {
     flex-direction: column;
     justify-content: space-between !important;
     max-width: 400px;
-    min-height: 450px !important;
-    border: 10px solid #F39C12 !important;
+    min-height: 250px !important;
+    border: none !important;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5) ;
+    background-color: #f0f0f0 !important;
+    margin-top: 5px;
+}
+
+/* Position the image in the top right of the Dropzone */
+.tc-header,
+.dropzone-header {
+    position: absolute;
+    top: 0px; /* Adjust as needed */
+    right: 0px; /* Adjust as needed */
+    z-index: 10; /* Ensure it appears above other content */
+}
+
+.dz-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dropzone .dz-preview.dz-image-preview {
+    width: 80px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+}
+
+.dropzone .dz-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+
+}
+
+.dz-space {
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #318587;
+    border: 10px solid #318587;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Optional: Adjust the spacing and visibility of the image */
+.tc-header img, 
+.dropzone-header img {
+    display: block;
+}
+
+.circle-container {
+    /* Make the container a square to hold the circular image */
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    position: relative;
+    display: inline-block;
+}
+
+.circle-container img {
+    /* Make the image circular */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.6); /* Adjust the shadow as needed */
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .resume-buttons,
@@ -244,6 +214,8 @@ h4 {
     justify-content: space-around; /* Ensures buttons are spaced around */
     margin-top: 10px;
     align-items: center;
+    position: inherit;
+    
 }
 
 .resume-buttons .btn,
@@ -252,9 +224,12 @@ h4 {
     flex: 1; /* Allows buttons to grow equally */
     margin: 0 5px; /* Adds some spacing between buttons */
     text-align: center;
+    border-radius: 20px;
+    max-width: 100px;
 }
 
 .text-container {
+    position: relative;
     width: 100%; 
     height: 100%;
     max-width: 400px;
@@ -264,8 +239,8 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #F39C12;
-    border: 10px solid #F39C12;
+    background-color: #318587;
+    border: 10px solid #318587;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 
 }
@@ -280,24 +255,16 @@ textarea.form-control.fc-custom {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
-
+    margin-top: 5px;
 }
 
 .text-container {
     padding: 20px;
 }
 
-.dz-message {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
+
 
 .txt-custom {
     text-align: center;
@@ -310,11 +277,12 @@ textarea.form-control.fc-custom {
     flex-direction:column;
     justify-content: space-between;
     border-radius: 20px;
-    border: 10px solid #191080;
+    border: 10px solid #318587;
     max-width: 400px;
     padding: 20px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
     z-index: 1;
+    background-color: #f0f0f0;
 }
 
 .resume-upload, .upload-job-description {
@@ -335,15 +303,17 @@ h3 {
 }
 
 .btn-primary {
-    background-color: #0C63ED;
-    border: none;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    background-color: #5c9d89 !important;
+    border: 2px ridge #e2f2f2 !important;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5),
+        inset 8px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 .btn-secondary {
-    background-color: #6c757d;
-    border: none;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    background-color: #d94716 !important;
+    border: 2px ridge #e2f2f2 !important;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5),
+        inset 8px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 .container-fluid .square {
@@ -406,3 +376,6 @@ h3 {
     overflow: hidden; /* Hide anything outside the border-radius */
 }
 
+footer .social .bi {
+    fill: #f0f0f0 !important;
+}

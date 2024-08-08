@@ -1,0 +1,103 @@
+.profile-page {
+    height: calc(100vh - 70px); /* Ensure it takes the full viewport height minus the navbar height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+#profile-page-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+#profile-page-scroll {
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.profile-page .profile-img-photo {
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-page .dropzone {
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-page .dz-message {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-page #profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.profile-page .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.profile-page .card-body {
+    padding: 30px;
+}
+
+.profile-page .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.profile-page .form-check-label a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-page .form-check-label a:hover {
+    text-decoration: underline;
+}
+
+.profile-page .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.profile-page .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Hide the default message */
+.profile-page .dz-default.dz-message,
+.profile-page .dz-default.dz-message span {
+    display: none;
+}
+
+.profile-img-photo .dz-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img-photo .dz-label {
+    font-size: 10px; 
+    color: #1c1cf3; 
+    text-align: center;
+    display: block; 
+}
+
+.profile-card {
+    height: calc(100vh - 140px); 
+    overflow-y: auto; 
+    box-sizing: border-box; 
+}

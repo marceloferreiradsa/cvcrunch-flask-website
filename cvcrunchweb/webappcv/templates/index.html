@@ -9,23 +9,40 @@
     <div class="row text-center w-100">
         {% if current_user.is_authenticated %}
         <!-- Card 1: Resume Upload -->
-        <div class="d-flex justify-content-center col-md-12 col-lg-4 mb-3">
+        <div class="d-flex flex-column justify-content-center align-items-center col-md-12 col-lg-4 mb-3">
+            <div class="dz-space">
+                <div class="dropzone-header">
+                    <div class="circle-container">
+                        <img src="../static/images/question_mark_small.png" alt="Help" class="question-icon">
+                    </div>
+                </div>
             <form action="/upload" class="dropzone dz-custom" id="my-dropzone">
+                <div class="dropzone-header">
+                    
+                </div>
                 <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
                 <div class="dz-message needsclick">
                     <p>Arraste seu currículo para cá<br> ou clique para fazer o upload</p>
                 </div>
+                <div id="dropzone-previews" class="dz-preview-container"></div>
                 <!-- Wrap buttons in a div with appropriate classes -->
-                <div class="d-flex justify-content-around row dropzone-buttons">
-                    <button class="btn btn-primary mt-3">Upload</button>
-                    <button class="btn btn-secondary mt-3">Clear</button>
-                </div>
             </form>
+            <div class="d-flex justify-content-around dropzone-buttons">
+                <button class="btn btn-primary mt-3">Upload</button>
+                <button class="btn btn-secondary mt-3">Clear</button>
+            </div>
+            </div>
         </div>
+        
 
         <!-- Card 2: Job Description Upload -->
         <div class="d-flex justify-content-center col-md-12 col-lg-4 mb-3">
             <div class="text-container">
+                <div class="tc-header">
+                    <div class="circle-container">
+                        <img src="../static/images/question_mark_small.png" alt="Help" class="question-icon2">
+                    </div>
+                </div>
                 <textarea class="form-control fc-custom" placeholder="Cole a descrição da vaga aqui..." rows="10"></textarea>
             <div class="d-flex justify-content-around resume-buttons">
                 <button class="btn btn-primary mt-3">Save</button>
@@ -71,4 +88,8 @@
         {% endif %}
     </div>
 </div>
+<script>
+
+</script>
+
 {% endblock %}
